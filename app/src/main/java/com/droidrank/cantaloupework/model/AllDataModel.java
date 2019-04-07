@@ -38,7 +38,7 @@ public class AllDataModel extends BaseObservable {
         };
         NYTDataApi apiService = ApiClient.getClient().create(NYTDataApi.class);
 
-        Call<AllData> call = apiService.getMostPopularArticles(7, Constants.NYT_API_KEY, 20);
+        Call<AllData> call = apiService.getMostPopularArticles(7, Constants.NYT_API_KEY, 0);
         call.enqueue(callback);
     }
 }
